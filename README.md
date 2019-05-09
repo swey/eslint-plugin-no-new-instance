@@ -20,7 +20,7 @@ $ npm install eslint-plugin-no-instantiating --save-dev
 
 ## Usage
 
-Add `test-plugin` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
+Add `no-instantiating` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
 
 ```json
 {
@@ -36,7 +36,7 @@ Then configure the rules you want to use under the rules section.
 ```json
 {
     "rules": {
-        "no-instantiating/no-instantiating": ["Event", "AnotherClass"]
+        "no-instantiating/no-instantiating": ["error", ["Event", "AnotherClass"]]
     }
 }
 ```

@@ -19,12 +19,12 @@ const RuleTester = require('eslint').RuleTester;
 const ruleTester = new RuleTester();
 ruleTester.run('no-instantiating', rule, {
 	valid: [{
-		options: ['Event'],
+		options: [['Event']],
 		code: 'new CustomEvent(\'loaded\')'
 	}],
 	invalid: [
 		{
-			options: ['Event'],
+			options: [['Event']],
 			code: 'new Event(\'resize\')',
 			errors: [
 				{
@@ -33,7 +33,7 @@ ruleTester.run('no-instantiating', rule, {
 			]
 		},
 		{
-			options: ['Test', 'Event', 'MouseEvent'],
+			options: [['Test', 'Event', 'MouseEvent']],
 			code: 'new Event(\'resize\')',
 			errors: [
 				{
