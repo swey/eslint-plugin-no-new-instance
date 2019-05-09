@@ -1,6 +1,6 @@
-# eslint-plugin-no-instantiating
+# eslint-plugin-no-new-instance
 
-ESLint rule for disallowing the instantiating of given classes
+ESLint rule for disallowing new instances of configured classes
 
 ## Installation
 
@@ -10,22 +10,22 @@ You'll first need to install [ESLint](http://eslint.org):
 $ npm i eslint --save-dev
 ```
 
-Next, install `eslint-plugin-no-instantiating`:
+Next, install `eslint-plugin-no-new-instance`:
 
 ```
-$ npm install eslint-plugin-no-instantiating --save-dev
+$ npm install eslint-plugin-no-new-instance --save-dev
 ```
 
-**Note:** If you installed ESLint globally (using the `-g` flag) then you must also install `eslint-plugin-no-instantiating` globally.
+**Note:** If you installed ESLint globally (using the `-g` flag) then you must also install `eslint-plugin-no-new-instance` globally.
 
 ## Usage
 
-Add `no-instantiating` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
+Add `no-new-instance` to the plugins section of your `.eslintrc` configuration file. You can omit the `eslint-plugin-` prefix:
 
 ```json
 {
     "plugins": [
-        "no-instantiating"
+        "no-new-instance"
     ]
 }
 ```
@@ -36,7 +36,7 @@ Then configure the rules you want to use under the rules section.
 ```json
 {
     "rules": {
-        "no-instantiating/no-instantiating": ["error", ["Event", "AnotherClass"]]
+        "no-new-instance/no-new-instance": ["error", ["Event", "AnotherClass"]]
     }
 }
 ```

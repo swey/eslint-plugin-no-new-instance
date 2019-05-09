@@ -1,5 +1,5 @@
 /**
- * @fileoverview Disallow instantiating of given classes
+ * @fileoverview Tests for no-new-instance rule.
  * @author Sebastian Weyrauch
  */
 'use strict';
@@ -8,7 +8,7 @@
 // Requirements
 //------------------------------------------------------------------------------
 
-const rule = require('../../../lib/rules/no-instantiating');
+const rule = require('../../../lib/rules/no-new-instance');
 const RuleTester = require('eslint').RuleTester;
 
 
@@ -17,7 +17,7 @@ const RuleTester = require('eslint').RuleTester;
 //------------------------------------------------------------------------------
 
 const ruleTester = new RuleTester();
-ruleTester.run('no-instantiating', rule, {
+ruleTester.run('no-new-instance', rule, {
 	valid: [{
 		options: [['Event']],
 		code: 'new CustomEvent(\'loaded\')'
@@ -28,7 +28,7 @@ ruleTester.run('no-instantiating', rule, {
 			code: 'new Event(\'resize\')',
 			errors: [
 				{
-					messageId: 'avoidInstantiating'
+					messageId: 'avoidNewInstance'
 				}
 			]
 		},
@@ -37,7 +37,7 @@ ruleTester.run('no-instantiating', rule, {
 			code: 'new Event(\'resize\')',
 			errors: [
 				{
-					messageId: 'avoidInstantiating'
+					messageId: 'avoidNewInstance'
 				}
 			]
 		}
