@@ -1,7 +1,7 @@
 {
   "name": "eslint-plugin-no-new-instance",
   "version": "1.1.0",
-  "description": "ESLint rule for disallowing the instantiating of given classes",
+  "description": "ESLint rule for disallowing new instances of configured classes\n",
   "keywords": [
     "eslint",
     "eslintplugin",
